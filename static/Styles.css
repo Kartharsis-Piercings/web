@@ -1,0 +1,358 @@
+/*General Reset*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            padding: 0.5rem 5%;
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+                        url('https://i.ibb.co/JW9YQqyF/13102023-Marmol-negro-2.jpg') center/cover;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 50px;
+
+        }
+
+        nav a {
+            color: #f5f5f5;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+            font-family: "quicksand", sans-serif;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #84529C;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 102.8vh;
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+                        url('https://i.ibb.co/R43Fc7Hf/Background.png') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 10%;
+            margin-top: -0px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.8rem;
+            text-shadow: #000000 0px 0px 6px;
+            font-family: "quicksand", sans-serif;
+            font-style: normal;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            text-shadow: #000000 1.2px 1.12px 0px;
+            font-family: "quicksand", sans-serif;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            transition: color 0.9s; 
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 5rem;
+        }
+
+        .btn-primary {
+            background: #84529C;
+            color: #0a0a0a;
+            transition: Color 0.9s;
+            transition: transform 0.3s;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            background: #0a0a0a;
+            color: #84529C;
+        }
+
+        .btn-secondary {
+            border: 2px solid #84529C;
+            color: #84529C;
+            transition: color 0.9s;
+            transition: transform 0.3s;
+        }
+        .btn-secondary:hover {
+            transform: scale(1.05);
+            background: #84529C;
+            color: #0a0a0a;
+        }
+
+        /* Texto a lado del carrusel */
+        .carousel-section {
+            background: #0f0f0f;
+        }
+        /* Contenedor para texto y carrusel en fila */
+        .carousel-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        /* Texto a la izquierda */
+        .carousel-text {
+            text-align: left;
+            font-size: 1.2rem;
+            color: #f5f5f5;
+            font-family: "quicksand", sans-serif;
+            max-width: 849px;
+            margin: 0;
+            margin-left: 2.2rem;
+            margin-right: 1.5rem;
+            line-height: 1.5;
+        }
+        .carousel-text h2 {
+            font-size: 2.5rem;
+            color: #84529C;
+            margin-bottom: -0.4rem;
+            font-family: "quicksand", sans-serif;
+        }
+        .carousel-text p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #f5f5f5;
+            font-family: "quicksand", sans-serif;
+        }
+
+        /* Carrusel a la derecha */
+        .carousel-container {
+            position: relative;
+            position: left;
+            display: flex;
+            max-width: 350px;
+            height: 370px;
+            margin:auto;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            display: flex;
+            position: central;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Permite ajustar la posición de cada imagen individualmente */
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Por defecto sin desplazamiento */
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        /* Ajusta la posición de la primera imagen */
+        .slide-1 img {
+            left: 0px; /* Cambia este valor para mover en X */
+            top: 0px;  /* Cambia este valor para mover en Y */
+        }
+        /* Ajusta la posición de la segunda imagen */
+        .slide-2 img {
+            left: 10px;
+            top: 10px;
+        }
+        /* Ajusta la posición de la tercera imagen */
+        .slide-3 img {
+            left: -10px;
+            top: 15px;
+        }
+        /* Ajusta la posición de la cuarta imagen */
+        .slide-4 img {
+            left: 0px;
+            top: 10px;
+        }
+        /* Ajusta la posición de la quinta imagen */
+        .slide-5 img {
+            left: 5px;
+            top: 10px;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 9px;
+            transition: opacity 0.3s;
+        }
+
+        .carousel-btn:hover {
+            opacity: 0.8;
+        }
+
+        .prev-btn {
+            left: 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .next-btn {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+        /* Why Choose Us */
+        .features {
+            padding: 2.3rem 5%;
+            background: #1a1a1a;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem 5%;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 1.8rem;
+            background: #252525;
+            border-radius: 10px;
+            margin-top: -15px;
+            margin-bottom: -15px;
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #84529C;
+            margin-bottom: 1rem;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover i {
+            transform: scale(1.4);
+        }
+
+        /* Quick Links */
+
+        .quick-links {
+            padding: 3.5rem 5%;
+        }
+
+        /* Subheading */
+        .subheading {
+            text-align: center;
+            font-size: 2rem;
+            color: #84529C;
+            font-family: "quicksand", sans-serif;
+        }
+
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .link-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .link-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .link-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        
+            /* Footer */
+        }
+        .footer-content {
+            text-align: center;
+            padding: 1rem 5%;
+            background: #1a1a1a;
+            color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1.2rem;
+            order: 1;
+        }
+        .social-media i {
+            font-size: 1.9rem; /* Cambia este valor para modificar el tamaño */
+            transition: transform 0.2s;
+            color: #84529C;
+        }
+        .social-media i:hover {
+            transform: scale(1.2);
+        }
+        .footer-content p {
+            margin: 0.5rem 0;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            order: 2;
+        }
